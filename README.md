@@ -1,6 +1,6 @@
 # CheatSheet
 ### Coding cheat sheet for the following systems:
-
+Visit the site [here](https://deniskent.github.io/CheatSheet/).
 * GIT
 * Markdown
 * Linix Bash Commands
