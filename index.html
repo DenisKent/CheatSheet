@@ -6,9 +6,16 @@
   <script src="script.js"></script>
 </head>
 <body>
-  <button type="button" onclick=hideClassExceptId("skill","git")>GIT</button>
-  <button type="button" onclick=hideClassExceptId("skill","markdown")>Markdown</button>
-  <div class="skill" id="git">
+  <header role="banner">
+    <h1>Founders and Coders Cheat Sheet</h1>
+    <button type="button" onclick=hideClassExceptId("skill","git")>GIT</button>
+    <button type="button" onclick=hideClassExceptId("skill","markdown")>Markdown</button>
+    <button type="button" onclick=hideClassExceptId("skill","bash")>Bash</button>
+    <button type="button" onclick=hideClassExceptId("skill","regex")>Regex</button>
+    <button type="button" onclick=hideClassExceptId("skill","css-layout")>CSS layout</button>
+    <button type="button" onclick=hideClassExceptId("skill","DOM")>DOM</button>
+  </header>
+  <section class="skill" id="git">
     <h2>Git</h2>
     <ul>
       <li>clone [url]</li>
@@ -27,9 +34,10 @@
       <li>show [commit ID]</li>
       <li>git remote add [origin]</li>
       <li>fetch [origin master]</li>
+      <li>https://eu.udacity.com/course/how-to-use-git-and-github--ud775</li>
     </ul>
-  </div>
-  <div class="skill" id="markdown">
+  </section>
+  <section class="skill" id="markdown">
     <h2>Markdown</h2>
     <ul>
       <li>_In Italics_</li>
@@ -50,8 +58,8 @@
       <li>Hard paragraphs<br><br>are done using two returns</li>
       <li>Soft paragraphs<br>are done using two spaces at the end of the line then one return</li>
     <ul>
-  </div>
-  <div class="skill" id="bash">
+  </section>
+  <section class="skill" id="bash">
     <h2>Bash</h2>
     <ul>
       <li>cd [.. or filename]</li>
@@ -65,6 +73,81 @@
       <li>pushd [directory]</li>
       <li>popd</li>
       <li>touch [filename]</li>
+      <li>https://learnpythonthehardway.org/book/appendix-a-cli/introduction.html</li>
     </ul>
-  </div>
+  </section>
+  <section class="skill" id="regex">
+    <h2>Regular expressions</h2>
+    <ul>
+      <li>let reg = /abc/</li>
+      <li>let reg = new RegExp("\\b("+myname+")\\b", "gi")</li>
+      <li>reg.test("abcd")</li>
+      <li>reg.exec("acde")</li>
+      <li>/ab(c)/.exec("abc")</li>
+      <li>/[a-g]/</li>
+      <li>/abc/i</li>
+      <li>/abc/g  (careful will keep a record of index)</li>
+      <li>/abc/y  (careful will keep a record of index)</li>
+      <li>/\w/</li>
+      <li>/\d/</li>
+      <li>/\s/</li>
+      <li>/\W/</li>
+      <li>/./</li>
+      <li>/^/</li>
+      <li>/\b/</li>
+      <li>/abc?d/</li>
+      <li>/abc+/</li>
+      <li>/abc*/</li>
+      <li>/\d{1,4}/</li>
+      <li>/\babc\b/</li>
+      <li>/ab(c|d|e|)/</li>
+      <li>mystring.replace(/abc/,"test")</li>
+      <li>"Denis, Kent".replace(/(\w+), (\w+)/g,"$2 $1 $&")</li>
+      <li>"abc".replace(/ab/,str => str.toUpperCase())</li>
+      <li>mystring.replace(/\/\/.*|\/\*[^]*?\*\//g,"")</li>
+      <li>myname.replace(/[\\[.+*?(){|^$}]/g, "\\$&")</li>
+      <li>"test 1".search(/1/)</li>
+      <li>reg.lastIndex  (after having done an exec)</li>
+      <li>mymatch.index   (used on execed text)</li>
+      <li>mystring.match(/abc/g)</li>
+      <li>https://eloquentjavascript.net/09_regexp.html</li>
+    </ul>
+  </section>
+  <section class="skill" id="css-layout">
+    <h2>CSS layout</h2>
+    <ul>
+      <li>display: block, inline, none, flex, inline block</li>
+      <li>position: static (default), relative, fixed, absolute (for absolute to work within the direct parent, parent must be position:relative)</li>
+      <li>float: right, left (make sure to clear the items below the float clear: right, left, both)
+        (To fix overflow use overfloe:auto in the parent div)</li>
+      <li>@media screen and (min-width:600px), @media screen and (max-width:599px)</li>
+      <li>inline-block, vertical-align</li>
+      <li>display: flex (https://bocoup.com/blog/dive-into-flexbox)</li>
+      <li>flex-direction: row (default), row-reverse, column, column-reverse</li>
+      <li>justify-content: flex-start (default), flex-end, center, space-between, space-around (acts on the main axis-horizontal)</li>
+      <li>align-items: flex-start (default), flex-end, center, baseline, stretch (acts on the cross-axis - vertical)</li>
+      <li>flex-wrap: nowrap (default), wrap, wrap-reverse (acts on the cross axis)</li>
+      <li>align-content: stretch(default), flex-start, flex-end, center, space-between, space-around (acts on the main axis)</li>
+      <li>margin: auto (stretches the empty space for flex items)</li>
+      <li>align-self: stretch (default), flex-start, flex-end, center, baseline (overides align-items for individual flex items)</li>
+      <li>flex: [n] (free space for items), initial, none
+
+
+  </section>
+  <section class="skill" id="DOM">
+    <h2>Document Object Model</h2>
+    <ul>
+      <li>let myvar = document.querySelector('a'), querySelectorAll('a')</li>
+      <li>myvar.textContent = 'some text'</li>
+      <li>myvar.href = 'www.google.com'</li>
+      <li>document.getElementById()</li>
+      <li>let x = document.createElement('p')</li>
+      <li>let y = document.createTextNode('Here is some Latin text')</li>
+      <li>firstElement.appendChild(x)</li>
+      <li>firstElement.removeChild(x)</li>
+      <li>HTMLElement.style.color, .backgroundColor, .padding etc.</li>
+      <li>HTMLElement.setAttribute('class','bold')</li>
+      <li>https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents</li>
+    </ul>
+  </section>
 </body>
