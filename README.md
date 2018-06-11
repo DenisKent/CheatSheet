@@ -4,6 +4,8 @@ Visit the site [here](https://deniskent.github.io/CheatSheet/).
 * GIT
 * Markdown
 * Linix Bash Commands
+* DOM
+* CSS Layout
 
 
 _In Italics_
